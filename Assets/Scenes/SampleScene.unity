@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 369b9ebe3a62b904dbc19bd332b44086, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44772452, g: 0.49706358, b: 0.57264477, a: 1}
+  m_IndirectSpecularColor: {r: 0.030392157, g: 0.079048194, b: 0.16915461, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ad6f8600086b048bd49e30a6336530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerSize: 50
-  SpawnPoint: {fileID: 7641282}
-  towerBlock: {fileID: 6162853661101472082, guid: a6633e245648c044bac950ead46ecb10, type: 3}
-  towerBlock2: {fileID: 4859769099229459306, guid: 9aaa35fa2a05f7c47babe57b0268a366, type: 3}
+  _towerSize: 0
+  _SpawnPoint: {fileID: 0}
+  _towerBlock: {fileID: 0}
+  _towerBlock2: {fileID: 0}
 --- !u!114 &7641281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 354809104}
   - component: {fileID: 354809103}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e88646bb9c28e42b690a89b40dda76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeView: {fileID: 354809104}
-  tower: {fileID: 7641281}
+  _sizeView: {fileID: 0}
+  _tower: {fileID: 0}
 --- !u!114 &354809104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,14 +517,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.3627772, y: -0.365525, z: -0.021088885, w: 0.85693604}
-  m_LocalPosition: {x: 0.21999955, y: 3, z: 0}
+  m_LocalRotation: {x: 0.34323296, y: -0.6656359, z: 0.11934519, w: 0.6518257}
+  m_LocalPosition: {x: 4.9, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 37.325, y: -53.808, z: -22.269}
+  m_LocalEulerAnglesHint: {x: 37.325, y: -98.808, z: -22.269}
 --- !u!1 &797928017
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +584,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797928017}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -740,11 +740,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ced7f95c2af686747b481e6b22754ba6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.000000007450581
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ced7f95c2af686747b481e6b22754ba6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.000000007450581
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ced7f95c2af686747b481e6b22754ba6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 1175635617}
   - component: {fileID: 1175635616}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Interface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1019,7 +1019,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175635615}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.000000007450581, y: 0.7071068, z: -0.000000007450581, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 517f3bccff42c17489576b0576e825b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationDuration: 3
+  _animationDuration: 0
 --- !u!4 &1267281509
 Transform:
   m_ObjectHideFlags: 0
@@ -1167,7 +1167,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267281507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
   m_LocalPosition: {x: -0.019, y: 0.18, z: 0.004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1233,9 +1233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c131a2b662ea143992a3518a51862e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootPoint: {fileID: 817506958}
-  bulletTemplate: {fileID: 8233734984945595379, guid: 264680f431b638b419273bd219ab53db, type: 3}
-  delayBetweenShoots: 0.25
+  _shootPoint: {fileID: 0}
+  _bulletTemplate: {fileID: 0}
+  _delayBetweenShoots: 0
 --- !u!65 &1793188717
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1306,7 +1306,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793188715}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
   m_LocalPosition: {x: 2.94, y: 0.2, z: 0}
   m_LocalScale: {x: 1.0861, y: 0.22213553, z: 0.63797617}
   m_ConstrainProportionsScale: 0
