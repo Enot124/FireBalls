@@ -5,32 +5,32 @@ using UnityEngine.Events;
 [RequireComponent(typeof(TowerBuilder))]
 public class Tower : MonoBehaviour
 {
-   private TowerBuilder towerBuilder;
-   private List<BlockTower> blocks;
+   private TowerBuilder _towerBuilder;
+   private List<BlockTower> _blocks;
    public event UnityAction<int> SizeUpdated;
 
    void Start()
    {
-      towerBuilder = GetComponent<TowerBuilder>();
-      blocks = towerBuilder.Build();
+      _towerBuilder = GetComponent<TowerBuilder>();
+      _blocks = _towerBuilder.Build();
 
-      foreach (var block in blocks)
+      foreach (var block in _blocks)
       {
          block.BulletHit += OnBulletHit;
       }
-      SizeUpdated?.Invoke(blocks.Count);
+      SizeUpdated?.Invoke(_blocks.Count);
    }
 
    private void OnBulletHit(BlockTower hitblock)
    {
       hitblock.BulletHit -= OnBulletHit;
 
-      blocks.Remove(hitblock);
+      _blocks.Remove(hitblock);
 
-      foreach (var block in blocks)
+      foreach (var block in _blocks)
       {
          block.transform.position = new Vector3(block.transform.position.x, block.transform.position.y - block.transform.localScale.y * 2, block.transform.position.z);
       }
-      SizeUpdated?.Invoke(blocks.Count);
+      SizeUpdated?.Invoke(_blocks.Count);
    }
 }

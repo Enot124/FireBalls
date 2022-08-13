@@ -2,27 +2,27 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-   [SerializeField] private Transform shootPoint;
-   [SerializeField] private Bullet bulletTemplate;
-   [SerializeField] private float delayBetweenShoots;
-   private float timeAfterShoot;
+   [SerializeField] private Transform _shootPoint;
+   [SerializeField] private Bullet _bulletTemplate;
+   [SerializeField] private float _delayBetweenShoots;
+   private float _timeAfterShoot;
 
    private void Update()
    {
-      timeAfterShoot += Time.deltaTime;
+      _timeAfterShoot += Time.deltaTime;
 
       if (Input.GetMouseButtonDown(0))
       {
-         if (timeAfterShoot > delayBetweenShoots)
+         if (_timeAfterShoot > _delayBetweenShoots)
          {
             Shoot();
-            timeAfterShoot = 0;
+            _timeAfterShoot = 0;
          }
       }
    }
 
    private void Shoot()
    {
-      Instantiate(bulletTemplate, shootPoint.position, Quaternion.identity);
+      Instantiate(_bulletTemplate, _shootPoint.position, Quaternion.identity);
    }
 }

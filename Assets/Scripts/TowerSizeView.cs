@@ -3,21 +3,21 @@ using UnityEngine;
 
 public class TowerSizeView : MonoBehaviour
 {
-   [SerializeField] private TMP_Text sizeView;
-   [SerializeField] private Tower tower;
+   [SerializeField] private TMP_Text _sizeView;
+   [SerializeField] private Tower _tower;
 
    private void OnEnable()
    {
-      tower.SizeUpdated += onSizeUpdated;
+      _tower.SizeUpdated += onSizeUpdated;
    }
 
    private void OnDisable()
    {
-      tower.SizeUpdated -= onSizeUpdated;
+      _tower.SizeUpdated -= onSizeUpdated;
    }
 
    private void onSizeUpdated(int size)
    {
-      sizeView.text = size.ToString();
+      _sizeView.text = size.ToString();
    }
 }
