@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ad6f8600086b048bd49e30a6336530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _towerSize: 0
-  _SpawnPoint: {fileID: 0}
-  _towerBlock: {fileID: 0}
-  _towerBlock2: {fileID: 0}
+  _towerSize: 50
+  _SpawnPoint: {fileID: 7641282}
+  _towerBlock: {fileID: 6162853661101472082, guid: a6633e245648c044bac950ead46ecb10, type: 3}
+  _towerBlock2: {fileID: 4859769099229459306, guid: 9aaa35fa2a05f7c47babe57b0268a366, type: 3}
 --- !u!114 &7641281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,8 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e88646bb9c28e42b690a89b40dda76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sizeView: {fileID: 0}
-  _tower: {fileID: 0}
+  _sizeView: {fileID: 354809104}
+  _tower: {fileID: 7641281}
 --- !u!114 &354809104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 517f3bccff42c17489576b0576e825b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animationDuration: 0
+  _animationDuration: 2
 --- !u!4 &1267281509
 Transform:
   m_ObjectHideFlags: 0
@@ -1233,9 +1233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82c131a2b662ea143992a3518a51862e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shootPoint: {fileID: 0}
-  _bulletTemplate: {fileID: 0}
-  _delayBetweenShoots: 0
+  _shootPoint: {fileID: 817506958}
+  _bulletTemplate: {fileID: 8233734984945595379, guid: 264680f431b638b419273bd219ab53db, type: 3}
+  _delayBetweenShoots: 0.5
 --- !u!65 &1793188717
 BoxCollider:
   m_ObjectHideFlags: 0
